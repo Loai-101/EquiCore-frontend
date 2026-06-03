@@ -1,0 +1,94 @@
+/**
+ * Scoped table presentation for EquiCore dashboards.
+ * Prefix: ec-data-table — do not reuse these class names outside this component.
+ */
+.ec-data-table {
+  width: 100%;
+}
+
+.ec-data-table__surface {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(21, 36, 71, 0.08);
+  background: var(--color-white);
+  box-shadow: var(--shadow-card);
+}
+
+.ec-data-table__table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+}
+
+.ec-data-table__table thead {
+  background: linear-gradient(
+    180deg,
+    rgba(243, 244, 248, 0.95),
+    rgba(232, 234, 242, 0.95)
+  );
+}
+
+.ec-data-table__table th {
+  text-align: left;
+  padding: 0.85rem 1rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gray-600);
+  font-weight: 700;
+  border-bottom: 1px solid rgba(21, 36, 71, 0.08);
+}
+
+.ec-data-table__table td {
+  padding: 0.9rem 1rem;
+  font-size: 0.9rem;
+  color: var(--color-navy-900);
+  border-bottom: 1px solid rgba(21, 36, 71, 0.06);
+  vertical-align: middle;
+}
+
+.ec-data-table__table tbody tr:hover {
+  background: rgba(201, 162, 39, 0.04);
+}
+
+.ec-data-table__table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.ec-data-table__empty {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: var(--color-gray-600);
+  font-size: 0.95rem;
+}
+
+.ec-data-table__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.ec-data-table__btn {
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0.4rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: rgba(15, 26, 51, 0.06);
+  color: var(--color-navy-800);
+}
+
+.ec-data-table__btn--primary {
+  background: linear-gradient(
+    135deg,
+    var(--color-navy-900),
+    var(--color-navy-700)
+  );
+  color: var(--color-white);
+}
+
+.ec-data-table__btn:hover {
+  filter: brightness(1.05);
+}

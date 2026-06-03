@@ -1,0 +1,186 @@
+/**
+ * Demo-only training schedule rows for the stable dashboard calendar (API replaces later).
+ * weekColumnIndex: 0 = Sunday … 6 = Saturday (matches calendar columns).
+ */
+
+export const trainingScheduleTrainers = [
+  { id: 'tr-1', name: 'Ali Hussein Salman', color: '#e53935' },
+  { id: 'tr-2', name: 'Mohammed Al-Rashid', color: '#1976d2' },
+  { id: 'tr-3', name: 'Fatima Al-Zahra', color: '#7b1fa2' },
+  { id: 'tr-4', name: 'Ahmed Bin Khalid', color: '#2e7d32' },
+  { id: 'tr-5', name: 'Sarah Al-Mansoori', color: '#f9a825' },
+];
+
+/** @typedef {{ id: string, stableId: string, weekColumnIndex: number, trainerId: string, horseCount: number, timeText: string, distanceKm: number, typeKey: string, intensity: 'low' | 'normal' | 'high', countryKey: string, moreTypes?: number }} TrainingScheduleBlock */
+
+/** @type {TrainingScheduleBlock[]} */
+export const dummyTrainingScheduleBlocks = [
+  {
+    id: 'sch-1',
+    stableId: 'stable-1',
+    weekColumnIndex: 1,
+    trainerId: 'tr-3',
+    horseCount: 11,
+    timeText: '10 walk 45 trot 1 canter',
+    distanceKm: 18.5,
+    typeKey: 'multiPhase',
+    intensity: 'high',
+    countryKey: 'uae',
+    moreTypes: 1,
+  },
+  {
+    id: 'sch-2',
+    stableId: 'stable-1',
+    weekColumnIndex: 1,
+    trainerId: 'tr-1',
+    horseCount: 10,
+    timeText: '5 trot 10 canter',
+    distanceKm: 15.0,
+    typeKey: 'multiPhase',
+    intensity: 'high',
+    countryKey: 'bahrain',
+  },
+  {
+    id: 'sch-3',
+    stableId: 'stable-1',
+    weekColumnIndex: 2,
+    trainerId: 'tr-2',
+    horseCount: 8,
+    timeText: '30 recovery',
+    distanceKm: 0.0,
+    typeKey: 'water',
+    intensity: 'low',
+    countryKey: 'uae',
+  },
+  {
+    id: 'sch-4',
+    stableId: 'stable-1',
+    weekColumnIndex: 2,
+    trainerId: 'tr-4',
+    horseCount: 12,
+    timeText: '10 walk 20 trot 5 canter',
+    distanceKm: 22.0,
+    typeKey: 'hill',
+    intensity: 'normal',
+    countryKey: 'uae',
+  },
+  {
+    id: 'sch-5',
+    stableId: 'stable-1',
+    weekColumnIndex: 2,
+    trainerId: 'tr-5',
+    horseCount: 9,
+    timeText: '15 trot 15 canter',
+    distanceKm: 12.0,
+    typeKey: 'longCanter',
+    intensity: 'normal',
+    countryKey: 'bahrain',
+  },
+  {
+    id: 'sch-6',
+    stableId: 'stable-1',
+    weekColumnIndex: 3,
+    trainerId: 'tr-1',
+    horseCount: 10,
+    timeText: '8 trot 12 canter',
+    distanceKm: 16.0,
+    typeKey: 'multiPhase',
+    intensity: 'high',
+    countryKey: 'uae',
+  },
+  {
+    id: 'sch-7',
+    stableId: 'stable-1',
+    weekColumnIndex: 3,
+    trainerId: 'tr-3',
+    horseCount: 7,
+    timeText: '40 active walk',
+    distanceKm: 6.0,
+    typeKey: 'activeWalk',
+    intensity: 'low',
+    countryKey: 'uae',
+  },
+  {
+    id: 'sch-8',
+    stableId: 'stable-1',
+    weekColumnIndex: 4,
+    trainerId: 'tr-2',
+    horseCount: 14,
+    timeText: '12 trot 8 canter',
+    distanceKm: 20.0,
+    typeKey: 'straightLine',
+    intensity: 'normal',
+    countryKey: 'bahrain',
+  },
+  {
+    id: 'sch-9',
+    stableId: 'stable-1',
+    weekColumnIndex: 4,
+    trainerId: 'tr-4',
+    horseCount: 6,
+    timeText: '20 walk 10 trot',
+    distanceKm: 8.0,
+    typeKey: 'softGround',
+    intensity: 'low',
+    countryKey: 'uae',
+  },
+  {
+    id: 'sch-10',
+    stableId: 'stable-1',
+    weekColumnIndex: 2,
+    trainerId: 'tr-3',
+    horseCount: 5,
+    timeText: '25 trot',
+    distanceKm: 9.0,
+    typeKey: 'trotConditioning',
+    intensity: 'normal',
+    countryKey: 'uae',
+  },
+];
+
+export const trainingScheduleSummary = {
+  totalDurationLabel: '2944:05',
+  totalDistanceKm: 34756.5,
+  canterDurationLabel: '691:40',
+  durationBarPct: 72,
+  distanceBarPct: 58,
+  canterBarPct: 44,
+  horsesNotTraining: 238,
+  totalHorsesTraining: 192,
+  totalHorsesCap: 250,
+};
+
+/** Last seven days bar chart (demo); labels are short for axis */
+export const trainingScheduleLast7Days = [
+  { dayKey: 'thu', sessions: 12 },
+  { dayKey: 'fri', sessions: 9 },
+  { dayKey: 'sat', sessions: 14 },
+  { dayKey: 'sun', sessions: 11 },
+  { dayKey: 'mon', sessions: 16 },
+  { dayKey: 'tue', sessions: 13 },
+  { dayKey: 'today', sessions: 18 },
+];
+
+export const trainingActivityTypeKeys = [
+  'longCanter',
+  'trotConditioning',
+  'water',
+  'multiPhase',
+  'altConditioning',
+  'restDay',
+  'hill',
+  'strengthCore',
+  'customSession',
+  'softGround',
+  'straightLine',
+  'activeWalk',
+  'rehab',
+];
+
+export const trainingOtherTypeKeys = [
+  { key: 'race', dot: false },
+  { key: 'objective', dot: false },
+  { key: 'trainerNotes', dot: true },
+  { key: 'horseMetrics', dot: false },
+  { key: 'horseAvailability', dot: true },
+];

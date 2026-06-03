@@ -1,0 +1,16 @@
+.training-schedule-page__header {
+  margin-bottom: 1.25rem;
+}
+
+.training-schedule-page__title {
+  margin: 0;
+  font-size: 1.85rem;
+  color: var(--color-navy-900);
+}
+
+.training-schedule-page__subtitle {
+  margin: 0.35rem 0 0;
+  color: var(--color-gray-600);
+  max-width: 720px;
+  line-height: 1.55;
+}

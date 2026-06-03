@@ -1,0 +1,73 @@
+/**
+ * Stat card — prefix ec-stat-card.
+ */
+.ec-stat-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 1.35rem 1.5rem;
+  border: 1px solid rgba(21, 36, 71, 0.06);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.ec-stat-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at top right,
+    rgba(201, 162, 39, 0.12),
+    transparent 55%
+  );
+}
+
+.ec-stat-card__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.ec-stat-card__icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    rgba(15, 26, 51, 0.95),
+    rgba(28, 47, 92, 0.92)
+  );
+  color: var(--color-gold-400);
+  box-shadow: 0 10px 22px rgba(15, 26, 51, 0.25);
+}
+
+.ec-stat-card__label {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-gray-600);
+}
+
+.ec-stat-card__value {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-navy-900);
+}
+
+.ec-stat-card__hint {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--color-gray-600);
+}

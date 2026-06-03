@@ -1,0 +1,128 @@
+/**
+ * Sidebar chrome — prefix ec-sidebar. Used only inside dashboard shells.
+ */
+.ec-sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  align-self: stretch;
+  height: 100%;
+  max-height: 100dvh;
+  padding: 1.25rem 0.9rem 2rem;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    var(--color-navy-950) 0%,
+    var(--color-navy-900) 40%,
+    #121c34 100%
+  );
+  color: var(--color-white);
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.ec-sidebar__crest {
+  padding: 0.35rem 0.65rem 0.85rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ec-sidebar__crest-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  letter-spacing: 0.08em;
+}
+
+.ec-sidebar__crest-sub {
+  margin: 0.35rem 0 0;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.ec-sidebar__section-label {
+  margin: 0 0.65rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.ec-sidebar__nav {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.ec-sidebar__link {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.55rem 0.7rem;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid transparent;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.ec-sidebar__link:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.ec-sidebar__link--active {
+  background: linear-gradient(
+    135deg,
+    rgba(201, 162, 39, 0.22),
+    rgba(201, 162, 39, 0.05)
+  );
+  border-color: rgba(201, 162, 39, 0.45);
+  color: var(--color-white);
+}
+
+.ec-sidebar__hint {
+  margin: auto 0.65rem 0;
+  padding: 0.75rem 0.65rem;
+  border-radius: var(--radius-md);
+  background: rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.ec-sidebar__hint strong {
+  color: var(--color-gold-300);
+  font-weight: 600;
+}
+
+@media (max-width: 960px) {
+  .ec-sidebar {
+    width: 100%;
+    height: auto;
+    max-height: min(42vh, 320px);
+    flex-shrink: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 35;
+  }
+
+  .ec-sidebar__nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .ec-sidebar__hint {
+    width: 100%;
+  }
+}

@@ -1,0 +1,18 @@
+/**
+ * Stable layout — scope badge only (shell from ecDashboardShell).
+ * Prefix ec-stable-layout so rules never collide with Super Admin pages.
+ */
+.ec-stable-layout__scope-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(201, 162, 39, 0.15);
+  border: 1px solid rgba(201, 162, 39, 0.35);
+  color: #6b5210;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}

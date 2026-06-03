@@ -1,0 +1,102 @@
+/**
+ * Stable self-registration form styles.
+ */
+.stable-register-page {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3.5rem;
+}
+
+.stable-register-page__header h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2.1rem;
+}
+
+.stable-register-page__header p {
+  margin: 0;
+  color: var(--color-gray-600);
+  max-width: 640px;
+  line-height: 1.55;
+}
+
+.stable-register-page__form {
+  margin-top: 2rem;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.5rem 2rem;
+  border: 1px solid rgba(21, 36, 71, 0.08);
+  box-shadow: var(--shadow-card);
+}
+
+.stable-register-page__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem 1.25rem;
+}
+
+.stable-register-page__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.stable-register-page__field--full {
+  grid-column: 1 / -1;
+}
+
+.stable-register-page__label {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--color-gray-600);
+}
+
+.stable-register-page__input,
+.stable-register-page__select,
+.stable-register-page__textarea {
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(21, 36, 71, 0.12);
+  padding: 0.65rem 0.75rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  background: #fff;
+}
+
+.stable-register-page__textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.stable-register-page__hint {
+  margin: 0.25rem 0 0;
+  font-size: 0.8rem;
+  color: var(--color-gray-600);
+}
+
+.stable-register-page__actions {
+  margin-top: 1.75rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.stable-register-page__submit {
+  border: none;
+  border-radius: 999px;
+  padding: 0.85rem 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--color-navy-950);
+  background: linear-gradient(
+    135deg,
+    var(--color-gold-500),
+    var(--color-gold-300)
+  );
+  box-shadow: 0 14px 30px rgba(201, 162, 39, 0.35);
+}
+
+@media (max-width: 720px) {
+  .stable-register-page__grid {
+    grid-template-columns: 1fr;
+  }
+}

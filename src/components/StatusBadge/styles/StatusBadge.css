@@ -1,0 +1,49 @@
+/**
+ * Status pill — prefix ec-status-badge.
+ */
+.ec-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.ec-status-badge--pending {
+  background: rgba(201, 162, 39, 0.15);
+  color: #8a6b12;
+  border: 1px solid rgba(201, 162, 39, 0.35);
+}
+
+.ec-status-badge--approved,
+.ec-status-badge--active,
+.ec-status-badge--competing,
+.ec-status-badge--training {
+  background: rgba(34, 139, 87, 0.12);
+  color: #1d6b45;
+  border: 1px solid rgba(34, 139, 87, 0.28);
+}
+
+.ec-status-badge--rejected,
+.ec-status-badge--suspended {
+  background: rgba(180, 58, 58, 0.1);
+  color: #9b2c2c;
+  border: 1px solid rgba(180, 58, 58, 0.25);
+}
+
+.ec-status-badge--inactive,
+.ec-status-badge--rest {
+  background: var(--color-gray-200);
+  color: var(--color-gray-600);
+  border: 1px solid var(--color-gray-400);
+}
+
+.ec-status-badge--neutral {
+  background: rgba(21, 36, 71, 0.08);
+  color: var(--color-navy-700);
+  border: 1px solid rgba(21, 36, 71, 0.12);
+}

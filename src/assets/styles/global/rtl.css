@@ -1,0 +1,128 @@
+/**
+ * RTL overrides — paired with body.ltr / body.rtl from i18n bootstrap.
+ * Prefer logical properties in new CSS; these patches cover legacy components.
+ */
+body.rtl {
+  direction: rtl;
+}
+
+body.ltr {
+  direction: ltr;
+}
+
+body.rtl .ec-dashboard-shell {
+  flex-direction: row-reverse;
+}
+
+body.rtl .ec-sidebar {
+  border-right: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+body.rtl .ec-navbar__inner {
+  flex-direction: row-reverse;
+}
+
+body.rtl .ec-navbar__actions {
+  flex-direction: row-reverse;
+}
+
+body.rtl .ec-navbar__meta {
+  text-align: start;
+}
+
+body.rtl .ec-data-table__table th,
+body.rtl .ec-data-table__table td {
+  text-align: right;
+}
+
+body.rtl .stable-requests-page__toolbar {
+  flex-direction: row-reverse;
+}
+
+body.rtl .stable-review-page__row {
+  flex-direction: row-reverse;
+}
+
+body.rtl .landing-page__hero-actions,
+body.rtl .landing-page__pill-list {
+  flex-direction: row-reverse;
+}
+
+body.rtl .stable-register-page__actions {
+  justify-content: flex-start;
+}
+
+body.rtl .ec-navbar__brand {
+  flex-direction: row-reverse;
+}
+
+body.rtl .ec-navbar__titles {
+  align-items: flex-end;
+  text-align: right;
+}
+
+body.rtl .ec-navbar__logout-inner {
+  flex-direction: row-reverse;
+}
+
+body.rtl .ec-stat-card__top {
+  flex-direction: row-reverse;
+}
+
+body.rtl .login-page__demo {
+  direction: rtl;
+}
+
+body.rtl .stable-register-page__grid,
+body.rtl .stable-settings-page__grid,
+body.rtl .super-admin-settings-page__grid {
+  direction: rtl;
+}
+
+body.rtl .landing-page__section-inner,
+body.rtl .landing-page__grid-3 {
+  direction: rtl;
+}
+
+body.rtl .ec-data-table__surface {
+  direction: rtl;
+}
+
+body.rtl .ec-ts-modal__chev {
+  transform: scaleX(-1);
+}
+
+body.rtl .ec-ts-modal__head {
+  flex-direction: row-reverse;
+}
+
+body.rtl .ec-ts-modal__tile {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+body.rtl .ec-training-schedule__col-head {
+  flex-direction: row-reverse;
+}
+
+body.rtl .ec-ts-card__footer {
+  flex-direction: row-reverse;
+}
+
+body.rtl .ec-ts-card__bar {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+body.rtl .ec-ts-stat__label-row {
+  flex-direction: row-reverse;
+}
+
+body.rtl .ec-ts-warn {
+  flex-direction: row-reverse;
+}
+
+body.rtl .ec-ts-legend__item {
+  flex-direction: row-reverse;
+}
