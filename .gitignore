@@ -12,10 +12,10 @@ dist
 dist-ssr
 *.local
 
-# Local secrets — never commit real API keys (Vercel uses dashboard env vars instead)
+# Local secrets & env templates — never push these to GitHub
 .env
 .env.*
-!.env.example
+.env.example
 
 # Editor directories and files
 .vscode/*
