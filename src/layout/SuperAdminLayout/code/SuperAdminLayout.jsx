@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import Navbar from '../../../components/Navbar/code/Navbar';
 import Sidebar from '../../../components/Sidebar/code/Sidebar';
+import { DashboardNavProvider } from '../../../context/DashboardNavContext';
 import { ROUTES } from '../../../utils/constants';
 import '../../shared/ecDashboardShell.css';
 import '../styles/SuperAdminLayout.css';
@@ -41,19 +42,21 @@ export default function SuperAdminLayout() {
   );
 
   return (
-    <div className="ec-dashboard-shell">
-      <Sidebar
-        title={t('sidebar.superTitle')}
-        subtitle={t('sidebar.superSubtitle')}
-        items={navItems}
-        hint={t('sidebar.superHint')}
-      />
-      <div className="ec-dashboard-shell__content">
-        <Navbar variant="super" tenantLabel={t('common.globalConsole')} />
-        <div className="ec-dashboard-shell__scroll">
-          <Outlet />
+    <DashboardNavProvider>
+      <div className="ec-dashboard-shell">
+        <Sidebar
+          title={t('sidebar.superTitle')}
+          subtitle={t('sidebar.superSubtitle')}
+          items={navItems}
+          hint={t('sidebar.superHint')}
+        />
+        <div className="ec-dashboard-shell__content">
+          <Navbar variant="super" tenantLabel={t('common.globalConsole')} />
+          <div className="ec-dashboard-shell__scroll">
+            <Outlet />
+          </div>
         </div>
       </div>
-    </div>
+    </DashboardNavProvider>
   );
 }

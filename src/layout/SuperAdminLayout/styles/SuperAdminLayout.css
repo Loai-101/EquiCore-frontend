@@ -1,4 +1,8 @@
 /**
- * Super Admin layout overrides (optional).
- * Shared structural styles: src/layout/shared/ecDashboardShell.css
+ * Super Admin layout — markup uses shared `ec-dashboard-shell` (see
+ * layout/shared/ecDashboardShell.css) and `ec-sidebar` (components/Sidebar/styles/Sidebar.css).
+ *
+ * Full-height rail beside long pages: shell uses `align-items: stretch` and
+ * min-height 100vh/100dvh; desktop sidebar uses `align-self: stretch` and
+ * matching min-heights so the gradient background runs the full column height.
  */

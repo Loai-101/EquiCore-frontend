@@ -19,6 +19,8 @@
     "submit": "Submit for review",
     "login": "Login",
     "logout": "Log out",
+    "openNavigation": "Open navigation menu",
+    "closeNavigation": "Close navigation menu",
     "registerStable": "Register Stable",
     "back": "Back",
     "openPreview": "Open preview",
@@ -59,6 +61,7 @@
   },
   "sidebar": {
     "sectionNavigation": "Navigation",
+    "drawerUtilities": "Language & sign out",
     "multiTenantPrefix": "Multi-tenant:",
     "superTitle": "EquiCore Control",
     "superSubtitle": "Super administration",

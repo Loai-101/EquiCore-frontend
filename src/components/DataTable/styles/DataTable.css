@@ -30,6 +30,9 @@
 }
 
 .ec-data-table__table th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
   text-align: left;
   padding: 0.85rem 1rem;
   font-size: 0.72rem;
@@ -38,6 +41,7 @@
   color: var(--color-gray-600);
   font-weight: 700;
   border-bottom: 1px solid rgba(21, 36, 71, 0.08);
+  box-shadow: 0 1px 0 rgba(21, 36, 71, 0.08);
 }
 
 .ec-data-table__table td {

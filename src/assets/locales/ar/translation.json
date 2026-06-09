@@ -19,6 +19,8 @@
     "submit": "إرسال للمراجعة",
     "login": "تسجيل الدخول",
     "logout": "تسجيل الخروج",
+    "openNavigation": "فتح قائمة التنقل",
+    "closeNavigation": "إغلاق قائمة التنقل",
     "registerStable": "تسجيل الإسطبل",
     "back": "رجوع",
     "openPreview": "فتح المعاينة",
@@ -59,6 +61,7 @@
   },
   "sidebar": {
     "sectionNavigation": "التنقل",
+    "drawerUtilities": "اللغة وتسجيل الخروج",
     "multiTenantPrefix": "متعدد المستأجرين:",
     "superTitle": "تحكم إيكوي كور",
     "superSubtitle": "الإدارة العليا",

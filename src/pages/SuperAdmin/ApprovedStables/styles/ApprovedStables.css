@@ -219,8 +219,6 @@
   border: 1px solid var(--as-border);
   background: var(--as-card);
   box-shadow: var(--as-shadow);
-  max-height: min(70vh, 900px);
-  overflow-y: auto;
 }
 
 .as-table {

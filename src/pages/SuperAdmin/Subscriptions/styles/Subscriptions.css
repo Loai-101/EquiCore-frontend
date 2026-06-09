@@ -220,8 +220,7 @@
 }
 
 /**
- * Subscriptions data grid — isolated scrollport (cards/filters stay fixed above).
- * Luxury scrollbar: dark navy track, gold thumb.
+ * Subscriptions data grid — horizontal scroll only; page uses browser vertical scroll.
  */
 .subscriptions-table-wrapper {
   --st-scroll-track: #0f1c3a;
@@ -233,25 +232,15 @@
   max-width: 100%;
   min-width: 0;
   overflow-x: auto;
-  overflow-y: auto;
+  overflow-y: visible;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  overscroll-behavior: contain;
-  scrollbar-gutter: stable;
   scrollbar-width: thin;
   scrollbar-color: var(--st-scroll-thumb) var(--st-scroll-track);
   border-radius: var(--su-radius);
   border: 1px solid var(--su-border);
   background: var(--su-card);
   box-shadow: var(--su-shadow);
-  max-height: min(72vh, 900px);
-}
-
-@media (max-width: 960px) {
-  .subscriptions-table-wrapper {
-    max-height: min(65dvh, 720px);
-    scrollbar-gutter: auto;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

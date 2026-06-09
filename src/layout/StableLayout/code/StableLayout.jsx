@@ -19,6 +19,7 @@ import {
 } from 'lucide-react';
 import Navbar from '../../../components/Navbar/code/Navbar';
 import Sidebar from '../../../components/Sidebar/code/Sidebar';
+import { DashboardNavProvider } from '../../../context/DashboardNavContext';
 import { useAuth } from '../../../context/AuthContext';
 import {
   getStableSessionPermissions,
@@ -65,26 +66,28 @@ export default function StableLayout() {
   }, [auth.user, auth.isStableAdmin, auth.isStableUser, t]);
 
   return (
-    <div className="ec-dashboard-shell ec-stable-layout">
-      <Sidebar
-        title={stableName}
-        subtitle={
-          <span
-            className="ec-stable-layout__scope-badge"
-            title={t('common.allListsFilterTitle')}
-          >
-            {scope}
-          </span>
-        }
-        items={navItems}
-        hint={t('sidebar.stableHint')}
-      />
-      <div className="ec-dashboard-shell__content">
-        <Navbar variant="stable" tenantLabel={stableName} />
-        <div className="ec-dashboard-shell__scroll">
-          <Outlet />
+    <DashboardNavProvider>
+      <div className="ec-dashboard-shell ec-stable-layout">
+        <Sidebar
+          title={stableName}
+          subtitle={
+            <span
+              className="ec-stable-layout__scope-badge"
+              title={t('common.allListsFilterTitle')}
+            >
+              {scope}
+            </span>
+          }
+          items={navItems}
+          hint={t('sidebar.stableHint')}
+        />
+        <div className="ec-dashboard-shell__content">
+          <Navbar variant="stable" tenantLabel={stableName} />
+          <div className="ec-dashboard-shell__scroll">
+            <Outlet />
+          </div>
         </div>
       </div>
-    </div>
+    </DashboardNavProvider>
   );
 }

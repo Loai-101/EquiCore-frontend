@@ -587,7 +587,10 @@
 }
 
 .sr-table-wrap {
+  width: 100%;
+  max-width: 100%;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   border-radius: 10px;
   border: 1px solid var(--sr-gray-border);
 }

@@ -15,4 +15,5 @@
 
 .ec-public-layout__main {
   flex: 1;
+  min-width: 0;
 }
